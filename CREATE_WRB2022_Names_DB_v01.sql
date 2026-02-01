@@ -1,6 +1,6 @@
 -- All WRB features are based on World Reference Base for Soil Resources 2022 (corrections as of 2024-09-24)
 -- Sorting the name elements (qualifiers, subqualifiers) requires to consider the RSG-dependent qualifier position (principal, supplementary and non-listed qualifiers); for the principal qualifiers, this is explicitly defined for each RSG independently; supplementary qualifiers according to the alphabet, disregarding specifiers; non-listed qualifiers at the end of the supplementary qualifiers (here, in addition to WRB, two or more non-listed, applicable qualifiers are also ordered alphabetically)
--- A general WRB rule is that redundant information (nmae element) is not added to the soil name. Redundancy can occur between qualifiers and between RSG and qualifiers; therefore, some qualifiers have been labelled 'not applicable' for some RSGs.
+-- A general WRB rule is that redundant information (name element) is not added to the soil name. Redundancy can occur between qualifiers and between RSG and qualifiers; therefore, some qualifiers have been labelled 'not applicable' for some RSGs.
 -- Further non-applicability arises due to logical reasons from the WRB key. This has been labelled in v_q_ord with the reason for non-applicability.
 -- Some qualifiers are complementary complete, which means one of their group applies in any case; if they are missing, this is indicated in the resulting soil name in [ by listing those from which one should apply 
 
@@ -1521,3 +1521,4 @@ FROM (((((((((((((((((((((((((((((v_soil_prof INNER JOIN v_r ON v_soil_prof.rid=
 	LEFT JOIN v_soil_q_suppc_gr4_1 ON v_soil_prof.profid=v_soil_q_suppc_gr4_1.profid) LEFT JOIN v_soil_q_suppc_gr4_2 ON v_soil_prof.profid=v_soil_q_suppc_gr4_2.profid) LEFT JOIN v_soil_q_suppc_gr4_3 ON v_soil_prof.profid=v_soil_q_suppc_gr4_3.profid) LEFT JOIN v_soil_q_suppc_gr4_4 ON v_soil_prof.profid=v_soil_q_suppc_gr4_4.profid) LEFT JOIN v_soil_q_suppc_gr4_5 ON v_soil_prof.profid=v_soil_q_suppc_gr4_5.profid) LEFT JOIN v_soil_q_suppc_gr4_6 ON v_soil_prof.profid=v_soil_q_suppc_gr4_6.profid) LEFT JOIN v_soil_q_suppc_gr4_7 ON v_soil_prof.profid=v_soil_q_suppc_gr4_7.profid) LEFT JOIN v_soil_q_suppc_gr4_8 ON v_soil_prof.profid=v_soil_q_suppc_gr4_8.profid);
 
 -- END
+
